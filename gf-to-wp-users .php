@@ -37,13 +37,13 @@ class GF_Simple_AddOn_Bootstrap {
             return;
         }
 
-        require_once( 'class-gfsimpleaddon.php' );
+        require_once( 'class-gftowpusers.php' );
 
-        GFAddOn::register( 'GFSimpleAddOn' );
+        GFAddOn::register( 'GFWpUsers' );
     }
 
 }
 
 function gf_simple_addon() {
-    return GFSimpleAddOn::get_instance();
+    return GFWpUsers::get_instance();
 }

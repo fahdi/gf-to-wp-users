@@ -2,7 +2,7 @@
 
 GFForms::include_addon_framework();
 
-class GFSimpleAddOn extends GFAddOn {
+class GFWpUsers extends GFAddOn {
 
 	protected $_version = GF_SIMPLE_ADDON_VERSION;
 	protected $_min_gravityforms_version = '1.9';
@@ -128,7 +128,7 @@ class GFSimpleAddOn extends GFAddOn {
 	public function plugin_settings_fields() {
 		return array(
 			array(
-				'title'  => esc_html__( 'Simple Add-On Settings', 'simpleaddon' ),
+				'title'  => esc_html__( 'User Import Settings', 'simpleaddon' ),
 				'fields' => array(
 					array(
 						'name'              => 'mytextbox',
