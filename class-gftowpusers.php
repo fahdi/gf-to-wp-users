@@ -17,11 +17,11 @@ class GFWpUsers extends GFAddOn {
 	/**
 	 * Get an instance of this class.
 	 *
-	 * @return GFSimpleAddOn
+	 * @return GFWpUsers
 	 */
 	public static function get_instance() {
 		if ( self::$_instance == null ) {
-			self::$_instance = new GFSimpleAddOn();
+			self::$_instance = new GFWpUsers();
 		}
 
 		return self::$_instance;
