@@ -6,9 +6,14 @@ Description: A simple add-on to import users when a gravity form is inserted
 Version: 0.1
 Author: Fahad Murtaza
 Author URI:
+Text Domain: gf-to-wp-users
 */
 
-define( 'GF_SIMPLE_ADDON_VERSION', '2.1' );
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+define( 'GF_SIMPLE_ADDON_VERSION', '0.1' );
 
 add_action( 'gform_loaded', [ 'GF_Wp_Users_Bootstrap', 'load' ], 5 );
 
@@ -20,7 +25,7 @@ class GF_Wp_Users_Bootstrap {
 			return;
 		}
 
-		require_once( 'class-gftowpusers.php' );
+		require_once __DIR__ . '/class-gftowpusers.php';
 
 		GFAddOn::register( 'GFWpUsers' );
 	}
@@ -28,5 +33,8 @@ class GF_Wp_Users_Bootstrap {
 }
 
 function gf_wp_users_import_addon() {
+	if ( ! class_exists( 'GFWpUsers' ) ) {
+		return null;
+	}
 	return GFWpUsers::get_instance();
 }
