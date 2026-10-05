@@ -1,16 +1,20 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 GFForms::include_addon_framework();
 
 class GFWpUsers extends GFAddOn {
 
 	protected $_version = GF_SIMPLE_ADDON_VERSION;
 	protected $_min_gravityforms_version = '1.9';
-	protected $_slug = 'simpleaddon';
-	protected $_path = 'simpleaddon/simpleaddon.php';
+	protected $_slug = 'gf-to-wp-users';
+	protected $_path = 'gf-to-wp-users/gf-to-wp-users.php';
 	protected $_full_path = __FILE__;
-	protected $_title = 'Gravity Forms Simple Add-On';
-	protected $_short_title = 'Simple Add-On';
+	protected $_title = 'Gravity Forms to WP Users';
+	protected $_short_title = 'WP Users';
 
 	private static $_instance = null;
 
